@@ -1,0 +1,313 @@
+@import "Variables.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 89vh;
+  transition: all 1s;
+
+  h1 {
+    font-weight: 500;
+    margin-bottom: 4rem;
+  }
+}
+
+.background {
+  background-image: url("../img/background.jpg"),
+    linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+section {
+  width: 20%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.85);
+  }
+}
+
+.air {
+  background-image: url("../img/air.jpg"),
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75));
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 60%;
+  width: 18rem;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+
+  &:hover .description {
+    background: rgba(0, 0, 0, 0.85);
+  }
+}
+.sea {
+  background-image: url("../img/sea.jpg"),
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75));
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 80% 50%;
+  width: 18rem;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+
+  &:hover .description {
+    background: rgba(0, 0, 0, 0.85);
+  }
+}
+
+.ground {
+  width: 18rem;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  background-image: url("../img/ground.jpg"),
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75));
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 60%;
+
+  &:hover .description {
+    background: rgba(0, 0, 0, 0.85);
+  }
+}
+
+.ground_confirm {
+  width: 18rem;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s;
+  cursor: pointer;
+
+  p {
+    font-size: 0.9rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  h4 {
+    text-align: center;
+  }
+}
+
+.description {
+  background: rgba(0, 0, 0, 0.45);
+  width: 100%;
+  height: 25%;
+  padding-bottom: 2rem;
+}
+
+.confirm_button {
+  background: rgba(14, 167, 8, 0.45);
+  width: 100%;
+  height: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+
+  &:hover {
+    background: rgba(14, 167, 8, 0.65);
+  }
+}
+
+.car_box {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.choices {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 90%;
+
+  min-height: 50vh;
+
+  h4 {
+    text-transform: uppercase;
+    margin-top: 4rem;
+    font-weight: 600;
+  }
+}
+
+.upfront_content {
+  z-index: 10;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+// Confirm option for plane, helicopter and model
+
+.confirm {
+  width: 18rem;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.vehicle_box {
+  width: 100%;
+  height: 50%;
+  display: flex;
+}
+
+.option {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: 0.2s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  p {
+    position: absolute;
+    bottom: 0;
+    text-transform: uppercase;
+  }
+}
+
+.vehicle_selected {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.selection {
+  text-transform: uppercase;
+  opacity: 0.7;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  font-size: 0.9rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.option_available {
+  opacity: 1;
+  border: 2px solid white;
+}
+
+.modal_overlay {
+  position: fixed;
+  z-index: 50;
+  top: 0%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.selection_modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 30%;
+  height: 50%;
+  background: #000;
+  text-transform: uppercase;
+  z-index: 100;
+  text-align: center;
+  overflow: auto;
+
+  h3 {
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+  }
+}
+
+.model_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.model_item {
+  font-weight: 500;
+  width: 100%;
+  height: 5rem;
+  background: rgba(225, 225, 225, 0.05);
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+  box-sizing: border-box;
+
+  &:hover {
+    background: rgba(225, 225, 225, 0.15);
+  }
+
+  &:focus {
+    background: rgba(225, 225, 225, 0.15);
+    border: 2px inset #fff;
+  }
+}
+
+.opacity {
+  opacity: 1;
+}

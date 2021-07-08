@@ -1,0 +1,121 @@
+@import "Variables.scss";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.18rem;
+  overflow-x: hidden;
+  color: $color-light;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 30%;
+
+  &_items {
+    width: 40%;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  input {
+    background: transparent;
+    outline: none;
+    color: $color-light;
+    border: none;
+    overflow-x: hidden;
+    caret-color: $color-theme;
+    opacity: 0.5;
+    transition: 0.2s all;
+    width: 100%;
+
+    &:focus {
+      opacity: 1;
+    }
+
+    &::placeholder {
+      font-size: 1rem;
+    }
+  }
+}
+
+.svg-search {
+  width: 1.3rem;
+  height: 1.3rem;
+
+  padding-right: 0.2rem;
+  fill: #fff;
+}
+
+.navigation {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: transparent;
+
+  h1 {
+    text-transform: uppercase;
+    font-weight: 400;
+    color: $color-theme;
+    cursor: pointer;
+  }
+}
+
+.main-title {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  outline: none;
+  border: 0.2px solid $color-light;
+  color: $color-light;
+  background: $color-theme;
+  font-size: 1.1rem;
+  letter-spacing: 0.2rem;
+  padding: 0.6rem 2.2rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover,
+  &:focus {
+    color: #000;
+    border: 1.1px solid #000;
+  }
+}
+
+.button_box {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.form_submit {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search_button {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
