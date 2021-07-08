@@ -18,7 +18,11 @@ function Main({ transformers, handleDetailsTransformer }) {
   const filterHandler = (e) => {
     const filterSearch = transformers.filter((trans) => trans.faction === e);
     if (filterSearch.length === 0) {
-      return alert("Autobots are not recruited in your base yet");
+      if (e === "Deception") {
+        return alert("Deceptions are not recruited in your base yet");
+      } else {
+        return alert("Autobots are not recruited in your base yet");
+      }
     } else {
       setSearch(filterSearch);
       history.push("/search");
