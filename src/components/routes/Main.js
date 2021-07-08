@@ -6,6 +6,7 @@ import DeceptionMain from "../svg/DeceptionMain";
 import { SearchContext } from "../context/SearchContext";
 
 function Main({ transformers, handleDetailsTransformer }) {
+  // eslint-disable-next-line no-unused-vars
   const [search, setSearch] = useContext(SearchContext);
 
   let history = useHistory();

@@ -5,6 +5,7 @@ import { SearchContext } from "./context/SearchContext";
 
 function Navigation({ transformers }) {
   const [input, setInput] = useState("");
+  // eslint-disable-next-line no-unused-vars
   const [search, setSearch] = useContext(SearchContext);
   let history = useHistory();
 

@@ -5,7 +5,8 @@ import DeceptionMain from "../svg/DeceptionMain";
 import { SearchContext } from "../context/SearchContext";
 
 function Search({ transformers, handleDetailsTransformer }) {
-  const [search, setSearch] = useContext(SearchContext);
+  // eslint-disable-next-line no-unused-vars
+  const [search, _setSearch] = useContext(SearchContext);
 
   if (search.length === 0) {
     return <h2>No data, yet</h2>;
