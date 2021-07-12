@@ -100,6 +100,10 @@ function Details({
     setIsStatusOpen(false);
   };
 
+  const optionChosenHanlder = (e) => {
+    setChosenTransformer([e.type, e.model]);
+  };
+
   const statusStyleHandler = () => {
     if (detailsTransformer.status === "OK") {
       return "green";
@@ -217,9 +221,7 @@ function Details({
                       <div
                         tabIndex={i + 12}
                         className={styles.option}
-                        onClick={() =>
-                          setChosenTransformer([item.type, item.model])
-                        }
+                        onClick={() => optionChosenHanlder(item)}
                       >
                         <h4>{item.type}</h4>
                         <p>{item.model}</p>
@@ -234,9 +236,7 @@ function Details({
                       <div
                         tabIndex={i + 1}
                         className={styles.option}
-                        onClick={() =>
-                          setChosenTransformer([item.type, item.model])
-                        }
+                        onClick={() => optionChosenHanlder(item)}
                       >
                         <h4>{item.type}</h4>
                         <p>{item.model}</p>
@@ -251,9 +251,7 @@ function Details({
                       <div
                         tabIndex={2 + 3}
                         className={styles.option}
-                        onClick={() =>
-                          setChosenTransformer([item.type, item.model])
-                        }
+                        onClick={() => optionChosenHanlder(item)}
                       >
                         <h4>{item.type}</h4>
                         <p>{item.model}</p>
@@ -261,9 +259,7 @@ function Details({
                     </div>
                   ))}
                 </div>
-                <div>
-                  <div className={styles.choices}></div>
-                </div>
+                <div></div>
                 <div
                   className={styles.status_button}
                   onClick={() => setIsStatusOpen(true)}

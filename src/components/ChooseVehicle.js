@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "../styles/CreateTransformer.module.scss";
 import CarSvg from "./svg/CarSvg";
 import PlaneSvg from "./svg/PlaneSvg";

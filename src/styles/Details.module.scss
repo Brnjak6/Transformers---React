@@ -1,6 +1,6 @@
 @import "Variables.scss";
 .container {
-  min-height: 89vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,6 +96,17 @@
   flex-direction: column;
   flex-wrap: wrap;
   margin: 2rem 2rem;
+
+  @media only screen and (max-width: 1550px) {
+    height: 12rem;
+  }
+  @media only screen and (max-width: 790px) {
+    height: 9rem;
+  }
+  @media only screen and (max-width: 450px) {
+    width: 95vw;
+    height: 7rem;
+  }
 }
 
 .detail_items {
@@ -118,6 +129,11 @@
   font-size: 1.3rem;
   transition: 0.2s;
 
+  @media only screen and (max-width: 790px) {
+    font-size: 1.1rem;
+    height: 30%;
+  }
+
   &:hover {
     background: rgba(172, 14, 164, 0.663);
   }
@@ -131,6 +147,10 @@
   justify-content: center;
   font-size: 1.3rem;
   text-transform: uppercase;
+
+  @media only screen and (max-width: 790px) {
+    font-size: 0.7rem;
+  }
 }
 
 .modal_overlay {
@@ -173,6 +193,11 @@
   text-align: center;
   overflow: auto;
 
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    height: 100%;
+  }
+
   h3 {
     font-size: 1.5rem;
     letter-spacing: 0.3rem;
@@ -195,6 +220,16 @@
   text-align: center;
   overflow: auto;
   border: 1px solid $color-light;
+
+  @media only screen and (max-width: 1300px) {
+    width: 70%;
+    height: 70%;
+  }
+  @media only screen and (max-width: 500px) {
+    width: 100%;
+    height: 100%;
+  }
+
   h3 {
     font-size: 1.5rem;
     letter-spacing: 0.3rem;
@@ -217,11 +252,15 @@
 .confirm_button {
   background: rgba(14, 167, 8, 0.45);
   width: 100%;
-  height: 15%;
+  min-height: 15%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  @media only screen and (max-width: 1320px) {
+    min-height: 10%;
+  }
 
   &:hover {
     background: rgba(14, 167, 8, 0.65);
@@ -236,6 +275,10 @@
   justify-content: center;
   cursor: pointer;
 
+  @media only screen and (max-width: 1320px) {
+    min-height: 10%;
+  }
+
   &:hover {
     background: rgba(172, 14, 164, 0.65);
   }
@@ -246,9 +289,15 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  width: 100%;
+  width: 97%;
   margin: 1rem 0;
   border-bottom: 1px solid green;
+
+  @media only screen and (max-width: 1320px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
 
   h2 {
     height: 100%;
@@ -270,6 +319,15 @@
   padding: 0.3rem;
   cursor: pointer;
   font-size: 0.9rem;
+
+  @media only screen and (max-width: 1320px) {
+    width: 10rem;
+    border: 1px solid green;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 0.7rem;
+  }
 
   &:hover,
   &:focus {
@@ -308,6 +366,13 @@
   display: flex;
   align-items: center;
   margin-top: 1rem;
+
+  @media only screen and (max-width: 1000px) {
+    width: 30%;
+  }
+  @media only screen and (max-width: 650px) {
+    width: 50%;
+  }
 
   svg {
     fill: #000;

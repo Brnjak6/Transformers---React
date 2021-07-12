@@ -6,12 +6,14 @@
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  min-height: 89vh;
+  min-height: 80vh;
   transition: all 1s;
 
   h1 {
     font-weight: 500;
     margin-bottom: 4rem;
+    text-align: center;
+    width: 95%;
   }
 }
 
@@ -21,7 +23,7 @@
   background-blend-mode: overlay;
   background-size: cover;
   background-repeat: no-repeat;
-  position: absolute;
+  position: fixed;
   z-index: -1;
   top: 0;
   right: 0;
@@ -52,7 +54,8 @@ section {
   background-repeat: no-repeat;
   background-position: 50% 60%;
   width: 18rem;
-  height: 50vh;
+  height: 27rem;
+  margin: 1rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -73,7 +76,8 @@ section {
   background-repeat: no-repeat;
   background-position: 80% 50%;
   width: 18rem;
-  height: 50vh;
+  height: 27rem;
+  margin: 1rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -89,7 +93,8 @@ section {
 
 .ground {
   width: 18rem;
-  min-height: 50vh;
+  height: 27rem;
+  margin: 1rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -186,7 +191,7 @@ h1 {
 
 .confirm {
   width: 18rem;
-  min-height: 50vh;
+  height: 27rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -234,6 +239,7 @@ h1 {
   font-size: 0.9rem;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .option_available {
@@ -269,6 +275,15 @@ h1 {
   z-index: 100;
   text-align: center;
   overflow: auto;
+
+  @media only screen and (max-width: 1200px) {
+    width: 70%;
+    height: 60%;
+  }
+  @media only screen and (max-width: 500px) {
+    width: 100%;
+    height: 100%;
+  }
 
   h3 {
     font-size: 1.5rem;

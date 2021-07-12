@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import styles from "../../styles/Main.module.scss";
 import { useHistory } from "react-router-dom";
 import AutobotMain from "../svg/AutobotMain";
+import RecruitSvg from "../svg/RecruitSvg";
 import DeceptionMain from "../svg/DeceptionMain";
 import { SearchContext } from "../context/SearchContext";
 
@@ -100,6 +101,12 @@ function Main({ transformers, handleDetailsTransformer }) {
               </div>
             </div>
           ))}
+          <div
+            className="recruit-button"
+            onClick={() => createTransformerHandler()}
+          >
+            <RecruitSvg />
+          </div>
         </div>
       </>
     );

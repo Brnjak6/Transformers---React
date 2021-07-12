@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import SearchSvg from "./svg/SearchSvg";
+import HomeSvg from "./svg/HomeSvg";
 import { useHistory } from "react-router-dom";
 import { SearchContext } from "./context/SearchContext";
 
@@ -52,6 +53,9 @@ function Navigation({ transformers }) {
       <h1 className="main-title" onClick={() => history.push("/")}>
         CyberBase
       </h1>
+      <div className="home-button" onClick={() => history.push("/")}>
+        <HomeSvg />
+      </div>
       <div className="search">
         <div className="search_items">
           <form className="form_submit" onSubmit={searchHandler}>
@@ -59,7 +63,7 @@ function Navigation({ transformers }) {
               onChange={inputHandler}
               value={input}
               type="search"
-              placeholder="Search Cyberbase"
+              placeholder="Search Base"
             />
             <div className="search_button" onClick={() => searchClickHandler()}>
               <SearchSvg />

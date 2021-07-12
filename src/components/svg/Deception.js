@@ -2,10 +2,9 @@ import React from "react";
 
 function Deception() {
   return (
-    <div style={{ width: "fit-content" }}>
+    <div>
       <svg
-        width="152"
-        height="152"
+        className="deception-svg"
         viewBox="0 0 152 152"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
