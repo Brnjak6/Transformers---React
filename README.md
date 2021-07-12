@@ -13,8 +13,6 @@ User can go to details page to change every and each transformer's gear, status 
 
 Design is modern, personally created in Figma. Design is enriched with customized svgs that are acquired from flaticon.com
 
-### Application is not yet fully responsive. Desktop use is advisable
-
 Some of the technologies that were used: 
 
 JSX, SCSS Modules, JavaScript, API fetch...
