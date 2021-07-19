@@ -33,7 +33,7 @@ function Navigation({ transformers }) {
     const filterSearch = transformers.filter((trans) => trans.model === input);
     if (filterSearch.length === 0) {
       return alert(
-        'No results found. Search with uppercase. Example: "Kamov" or "Jetboat"'
+        'No results found in your Cyber Base. Search with uppercase. Example: "Kamov" or "Jetboat"'
       );
     } else {
       setSearch(filterSearch);
