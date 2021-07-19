@@ -13,8 +13,7 @@ function App() {
   const [transformers, setTransformers] = useState([]);
   const [transformer, setTransformer] = useState("");
   const [detailsTransformer, setDetailsTransformer] = useState(false);
-  const [editedTransformer, setEditedTransformer] = useState(false);
-  const [gearedTransformer, setGearedTransformer] = useState(false);
+  
   let history = useHistory();
 
   useEffect(() => {
